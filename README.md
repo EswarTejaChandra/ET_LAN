@@ -35,17 +35,38 @@ A modern laundry service management system built with Python Flask backend and B
    ```
 
 ## Deployment
-### Backend (Render/Heroku)
-1. Create account on [Render](https://render.com) or [Heroku](https://heroku.com)
+### Backend (Render)
+1. Create account on [Render](https://render.com)
+2. Create a new Web Service and connect your GitHub repository
+3. Configure settings:
+   - Name: et-laundry-backend
+   - Region: Select closest to your users
+   - Branch: main
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `gunicorn app:app`
+4. Set environment variables from your .env file in the dashboard
+5. Deploy the service
+6. Test API endpoints using Postman or curl
+
+### Frontend (Netlify)
+1. Create account on [Netlify](https://www.netlify.com/)
 2. Connect your GitHub repository
-3. Set environment variables in dashboard
-4. Deploy!
+3. Configure settings:
+   - Build command: (leave empty for static files)
+   - Publish directory: `static/`
+4. Set environment variables if needed
+5. Deploy site
+6. Test frontend functionality
 
 ### Frontend (Vercel/Netlify)
 1. Build static assets
 2. Connect repository to hosting service
 3. Set build command (if needed)
 4. Deploy!
+
+## Live URLs
+- Backend: [https://et-laundry-backend.onrender.com](https://et-laundry-backend.onrender.com)
+- Frontend: [https://et-laundry.netlify.app](https://et-laundry.netlify.app)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first.
