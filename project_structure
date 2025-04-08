@@ -1,0 +1,20 @@
+laundry_management/
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+├── templates/
+│   ├── base.html
+│   ├── auth/
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   └── reset_password.html
+│   ├── dashboard/
+│   │   └── index.html
+│   └── booking/
+│       └── calendar.html
+├── app.py
+├── config.py
+├── models.py
+└── requirements.txt 
